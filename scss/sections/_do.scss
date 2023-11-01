@@ -1,0 +1,74 @@
+.section-do {
+  &__cards {
+    display: flex;
+    justify-content: space-between;
+  }
+
+  &__card {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    flex: 0 1 23%;
+    padding: 4rem 3rem;
+    border: 1px solid $grey-light;
+    border-radius: 3rem;
+    background-image: radial-gradient(
+      circle at top right,
+      rgba($main-col, 0),
+      rgba($grey-dark, 0) 50%
+    );
+    transition: all 0.3s;
+
+    &:not(:last-child) {
+      margin-right: 1rem;
+    }
+
+    &:hover {
+      transform: scale(1.04);
+      color: $white;
+      box-shadow: 0 0.2rem 1rem 0.2rem rgba($grey-dark, 0.2);
+      background-image: radial-gradient(
+        circle at top right,
+        $main-col,
+        $grey-dark 50%
+      );
+    }
+
+    &:hover svg {
+      color: $white;
+    }
+  }
+
+  &__icon {
+    color: $main-col;
+    width: 10rem;
+    height: 10rem;
+    margin-bottom: 4rem;
+  }
+
+  &__card-heading {
+    font-weight: 600;
+    line-height: 1;
+  }
+
+  &__card-desc {
+    margin-top: 1rem;
+    text-align: center;
+    font-weight: 300;
+  }
+}
+
+@media (max-width: 992px) {
+  .section-do {
+    &__cards {
+      display: flex;
+      flex-direction: column;
+    }
+
+    &__card {
+      margin-bottom: 2rem;
+      margin-left: 2rem;
+      margin-right: 2rem;
+    }
+  }
+}

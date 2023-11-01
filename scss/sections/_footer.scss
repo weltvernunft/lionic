@@ -1,0 +1,136 @@
+@import '../variables';
+
+.footer {
+  height: 12.5rem;
+  background-image: radial-gradient(
+    circle at top right,
+    $main-col,
+    $grey-dark 10%
+  );
+
+  &__logo {
+    width: 10rem;
+    margin-right: 2rem;
+    filter: invert(18%) sepia(46%) saturate(5135%) hue-rotate(233deg)
+      brightness(85%) contrast(92%);
+  }
+
+  &__copyright {
+    font-weight: 300;
+    color: $white;
+  }
+
+  &__container {
+    justify-content: space-between;
+    height: 100%;
+  }
+
+  &__left,
+  &__right,
+  &__container {
+    display: flex;
+    align-items: center;
+  }
+
+  &__nav {
+    a {
+      font-weight: 300;
+      color: $white;
+    }
+    margin-right: 4rem;
+  }
+
+  &__nav-list {
+    display: flex;
+  }
+
+  &__nav-item {
+    &:not(:last-child) {
+      margin-right: 2rem;
+    }
+  }
+
+  &__nav-item a:hover {
+    color: $sec-col;
+  }
+
+  //SOCIAL MEDIA
+  &__social-list {
+    display: flex;
+    align-items: center;
+  }
+
+  &__social-item {
+    &:not(:last-child) {
+      margin-right: 2rem;
+    }
+  }
+
+  &__social-icon {
+    display: inline-block;
+    background-size: contain;
+    background-repeat: no-repeat;
+    background-color: transparent;
+
+    &--twitter {
+      filter: invert(18%) sepia(46%) saturate(5135%) hue-rotate(233deg)
+        brightness(85%) contrast(92%);
+
+      width: 2rem;
+      height: 2rem;
+      background-image: url('/img/twitter.svg');
+    }
+
+    &--linkedin {
+      filter: invert(18%) sepia(46%) saturate(5135%) hue-rotate(233deg)
+        brightness(85%) contrast(92%);
+      width: 2rem;
+      height: 2rem;
+      background-image: url('/img/linkedin.svg');
+    }
+
+    &--envelope {
+      filter: invert(18%) sepia(46%) saturate(5135%) hue-rotate(233deg)
+        brightness(85%) contrast(92%);
+      width: 2rem;
+      height: 2rem;
+      background-image: url('/img/envelope-regular.svg');
+    }
+  }
+}
+
+@media (max-width: 768px) {
+  .footer {
+    height: auto;
+
+    .container {
+      margin-bottom: 0;
+    }
+
+    &__container,
+    &__nav-list,
+    &__right,
+    &__left {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      margin-bottom: 2rem;
+      text-align: center;
+    }
+
+    &__left > *,
+    &__nav-item {
+      margin: 1rem;
+    }
+
+    &__nav {
+      margin-right: 0;
+    }
+
+    &__nav-item {
+      margin: 2rem;
+    }
+    
+    
+  }
+}

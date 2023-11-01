@@ -1,0 +1,89 @@
+@import 'variables';
+
+* {
+  box-sizing: border-box;
+}
+
+html {
+  font-size: 10px;
+}
+
+body {
+  font-family: 'Lato', sans-serif;
+  font-size: 1.6rem;
+  color: $main-text;
+}
+
+a {
+  color: $main-text;
+  text-decoration: none;
+}
+
+//Lists
+ul {
+  margin: 0;
+  padding: 0;
+}
+
+li {
+  list-style: none;
+}
+
+//Images
+
+img {
+  max-width: 100%;
+}
+
+//CONTAINER
+.container {
+  max-width: 1200px;
+  padding: 1rem;
+  margin: 0 auto;
+}
+
+//Center Text
+
+.text-c {
+  text-align: center;
+}
+
+//Margins
+
+.mb-1 {
+  margin-bottom: 1rem;
+}
+
+.mb-2 {
+  margin-bottom: 2rem;
+}
+
+.mb-3 {
+  margin-bottom: 3rem;
+}
+
+//Paddings
+
+.section-p {
+  padding: 10rem 0;
+}
+
+.p-m {
+  padding: 2rem;
+}
+
+//Border Bottom
+.b-b {
+  border-bottom: 1px solid $grey-light;
+}
+
+p {
+  margin: 0;
+  font-weight: 300;
+  line-height: 1.5;
+}
+
+.t-off {
+  display: none;
+}
+
